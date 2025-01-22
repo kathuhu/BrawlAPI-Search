@@ -1,0 +1,309 @@
+body {
+  font-family: "Lilita One", sans-serif;
+  background-image: url("img/brawl_stars_bg.jpg");
+  background-size: cover; /*cover the entire area with the bg image*/
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /*keep background fixed on scroll*/
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3em;
+  color: white;
+  font-weight: normal;
+  text-shadow: 2.5px 5px 0px #00103d;
+  text-transform: uppercase;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.5em;
+  color: #f1e392;
+  font-weight: normal;
+  text-shadow: 1px 2.5px 0px #00103d;
+  text-transform: uppercase;
+}
+
+.modal {
+  display: none; /*hidden by default*/
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgb(0, 0, 0);
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: normal;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#classButtonsDiv button {
+  font-family: "Lilita One", sans-serif;
+  color: white;
+  text-shadow: 2px 3px 0px #00103d;
+  gap: 0.5em;
+  margin-left: 2em;
+  text-transform: uppercase;
+}
+
+/* inactive button style */
+#classButtonsDiv .initialButton {
+  padding: 1em 2em;
+  font-size: 16px;
+  background-color: #3f383f;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  box-shadow: inset -3px -4px 0px #373038, inset 3px 4px 0px #524652;
+}
+
+/* hover button style */
+#classButtonsDiv .initialButton:hover {
+  background-color: #645e64;
+  box-shadow: inset -3px -4px 0px #403941, inset 3px 4px 0px #807780;
+}
+
+/* active button style */
+#classButtonsDiv .activeButton {
+  background-color: #efc60a; /* Darker background for active buttons */
+  color: white; /* Lighter text for active buttons */
+  border: none;
+  font-weight: normal;
+  box-shadow: inset -3px -4px 0px #ee9d4e, inset 3px 4px 0px #ffdc4c;
+  -webkit-text-stroke: 0.2px #aa8d0a;
+}
+
+#categoryInfo {
+  text-align: center;
+  margin-top: 20px;
+}
+
+#categoryTitle {
+  font-weight: normal;
+  margin-bottom: 10px;
+  font-size: 2em;
+  color: #ffcc6e;
+  font-weight: normal;
+  text-shadow: 2px 3px 0px #00103d;
+  text-transform: uppercase;
+  font-weight: normal;
+}
+
+#categoryDescription {
+  font-size: 16px;
+  color: #ffffff;
+  margin-bottom: 20px;
+  background-color: rgba(0, 0, 0, 0.35);
+  margin: 0 2em;
+  padding: 2em;
+  text-shadow: 1px 2px 0px #00103d;
+  border-radius: 8px;
+  line-height: 1.5em;
+}
+
+/*I asked ChatGPT for some ways that the brawlers-container could be styled. I only implemented some of its suggesstions, not all*/
+/* https://chatgpt.com/share/66fe1311-2780-800d-a6d3-30970315eb07 */
+.brawlers-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.brawler {
+  margin: 2em;
+  border: 6px solid #00103d;
+  padding: 0 1.5em 1.5em;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
+  box-shadow: 5px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.brawler h3 {
+  font-size: 2em;
+  color: white;
+  font-weight: normal;
+  text-shadow: 2.5px 4px 0px #00103d;
+  -webkit-text-stroke: 0.2px #3b4358;
+}
+
+.brawler p {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1em;
+  font-weight: normal;
+  color: white;
+}
+
+.brawler img {
+  max-width: 180px;
+  box-shadow: 3px 5px 0 rgba(0, 0, 0, 0.2);
+}
+
+.brawler-class {
+  font-weight: bold;
+  color: #ffcc6e;
+  font-size: 0.7em;
+  text-shadow: 2.5px 4px 0px #00103d;
+  font-weight: normal;
+  -webkit-text-stroke: none;
+  padding-left: 0.5em;
+}
+
+.details {
+  display: grid;
+  gap: 20px;
+  display: none;
+  background-color: #2b5da0;
+  border-radius: 0 0 10px 10px;
+  padding: 0 2em;
+  margin-top: 2em;
+  border-top: 5px solid #3376cc;
+}
+
+.details h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+  color: #ffffff;
+  text-shadow: 2px 3px 0px #00103d;
+}
+
+/* Star powers and gadgets list */
+/* the text colour was not changing with my code, so I consulted ChatGPT for some potential fixes. None of the fixes taht ChatGPt suggessted worked, but I ended up figuring out myself! */
+/* https://chatgpt.com/share/66fe1311-2780-800d-a6d3-30970315eb07 */
+.details ul {
+  list-style: none;
+  padding: 0;
+}
+
+.details li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+
+.details li p {
+  color: white;
+  font-weight: normal;
+}
+
+.details img {
+  max-width: 5em;
+  margin-right: 10px;
+  border-radius: 8px;
+  box-shadow: none;
+}
+
+/*my code was not displaying the way I wanted to, so I asked ChatGPT for help: "I want to display Star Powers and Gadgets side by side under their respective headings, but it's not quite working." */
+/* ChatGPT helped me with some CSS elements of my code to display my information the wya I wanted to */
+.starPowers-container,
+.gadgets-container {
+  display: grid;
+  gap: 10px;
+}
+
+.starPowers-container h4,
+.gadgets-container h4 {
+  grid-column: span 2;
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+.starPowers,
+.gadgets {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style-type: none;
+  padding: 0;
+}
+
+.starPowers li,
+.gadgets li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.7em;
+}
+
+.hidden {
+  display: none;
+}
+
+/* I asked ChatGPT for some suggesstions of how a search bar could be stylized */
+/* https://chatgpt.com/share/66fe1311-2780-800d-a6d3-30970315eb07 */
+#searchBar {
+  background-color: white;
+  color: #00103d;
+  padding: 1.2em;
+  border: 1px solid #00103d;
+  border-radius: 5em;
+  box-shadow: 2px 3px 0px #263248, inset 3px 4px 0px #c9cdd6;
+  width: 100%;
+  font-family: "Lilita One", sans-serif;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+#searchBar:focus {
+  border: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em 2em 2em;
+}
+
+.showDetailsButton {
+  font-family: "Lilita One", sans-serif;
+  background-color: #efc60a;
+  box-shadow: inset -3px -4px 0px #ee9d4e, inset 3px 4px 0px #ffdc4c,
+    3px 5px 0 #071836;
+  color: white;
+  border: none;
+  font-weight: normal;
+  -webkit-text-stroke: 0.2px #c5a40f;
+  text-shadow: 1px 2.5px 0px #00103d;
+  text-transform: uppercase;
+  padding: 0.8em 2em;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  font-size: 1em;
+  margin-left: 3em;
+}
+
+.showDetailsButton:hover {
+  background-color: #ee7023;
+  box-shadow: inset -3px -4px 0px #d7500e, inset 3px 4px 0px #f78429,
+    3px 5px 0 #071836;
+  -webkit-text-stroke: 0.2px #c5a40f;
+}
+
+#brawlLogo {
+  width: 100%;
+  max-width: 170px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 1.7em;
+}

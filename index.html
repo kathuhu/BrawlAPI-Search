@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brawlers Info</title>
+    <link rel="stylesheet" href="style.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Lilita+One&display=swap");
+      @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    </style>
+  </head>
+  <body>
+    <img src="img/brawl_stars_logo.png" alt="Brawl Stars Logo" id="brawlLogo" />
+    <p class="intro">Which brawler will be the best for you?</p>
+    <div class="container">
+      <input type="text" id="searchBar" placeholder="Search for a brawler..." />
+    </div>
+    <div id="classButtonsDiv"></div>
+
+    <!-- the category information section -->
+    <div id="categoryInfo" style="display: none">
+      <h2 id="categoryTitle"></h2>
+      <p id="categoryDescription"></p>
+    </div>
+
+    <div class="brawlers-container" id="brawlersDiv">
+      <!-- brawler information will be displayed here! -->
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
