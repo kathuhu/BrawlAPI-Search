@@ -1,3 +1,7 @@
+html {
+  height: 100%;
+}
+
 body {
   font-family: "Lilita One", sans-serif;
   background-image: url("img/brawl_stars_bg.jpg");
@@ -7,6 +11,7 @@ body {
   background-attachment: fixed; /*keep background fixed on scroll*/
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 h1 {
@@ -272,6 +277,7 @@ h1 {
   max-width: 1200px;
   margin: 0 auto;
   padding: 1em 2em 2em;
+  flex: 1;
 }
 
 .showDetailsButton {
@@ -306,4 +312,24 @@ h1 {
   display: block;
   margin: 0 auto;
   margin-top: 1.7em;
+}
+
+footer {
+  margin-top: 20px;
+  padding: 10px;
+  text-align: center;
+  font-family: "Lilita One", sans-serif;
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.35);
+  box-shadow: 2px 4px 0 rgba(0, 0, 0, 0.2);
+  color: white;
+}
+
+footer a {
+  color: #61d2ff;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }
